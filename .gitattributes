@@ -1,5 +1,5 @@
 ######################################################################
-# .gitattributes - controls line endinng normalization and helps git
+# .gitattributes - controls line ending normalization and helps git
 #   decide which files are binary and text. By default, git will
 #   commit with lf and checkout per dev's core.autocrlf setting. This file
 #   overrides that setting for the specified file types below.
@@ -14,9 +14,9 @@
 # git ls-tree -r HEAD --name-only | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u
 ######################################################################
 
-## This project uses editorconfig and airbnb linting expecting lf eol
-## Instruct git to default lf eol for all text files
-* text=lf
+## This project uses .editorconfig and airbnb linting expecting lf eol
+## Instruct git to default to lf eol for all text files even on checkout
+* text=auto eol=lf
 
 # specific file type instructions
 *.ico          binary
